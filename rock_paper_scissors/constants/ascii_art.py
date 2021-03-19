@@ -1,4 +1,5 @@
 """ASCII art for Rock Paper Scissors"""
+# flake8: noqa
 options = """
     Please make your choice:
         [R]ock

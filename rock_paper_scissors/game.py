@@ -1,6 +1,4 @@
-"""
-    Rock Paper Scissors Game
-"""
+"""Rock Paper Scissors Game."""
 import os
 import random
 
@@ -16,8 +14,9 @@ from constants.ascii_art import (
     win
 )
 
+
 def determine_result(p, c, name):
-    """Calculates if player wins or loses."""
+    """Calculate if player wins or loses."""
     art = {
         'r': rock,
         'p': paper,
@@ -31,7 +30,7 @@ def determine_result(p, c, name):
     if p == c:
         print(draw)
         return
-    
+
     if (p == 'r' and c == 's') or (p == 'p' and c == 'r') or (p == 's' and c == 'p'):
         print(win)
         return
@@ -40,7 +39,7 @@ def determine_result(p, c, name):
 
 
 def main_loop(name):
-    """Main loop."""
+    """Enter main loop."""
     valid_choices = ('r', 'p', 's')
     loop = True
 
@@ -63,7 +62,7 @@ def main_loop(name):
             continue
         again = input('\n\nPlay again [Y/N]?\n')
         loop = again.upper() != 'N'
-        
+
 
 def main():
     """Entry point."""
@@ -78,7 +77,7 @@ def main():
 
 
 def clear_screen():
-    """Clears terminal screen."""
+    """Clear terminal screen."""
     os.system('clear')
 
 

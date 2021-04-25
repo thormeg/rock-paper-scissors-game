@@ -50,6 +50,7 @@ def main_loop(name):
         print(f'Welcome, {name}!\n')
         print(options)
         choice = input('Please pick [R]ock, [P]aper, or [S]cissors:\n')
+        choice = choice[0]
 
         if choice.lower() in valid_choices:
             choice = choice.lower()
@@ -61,6 +62,7 @@ def main_loop(name):
             clear_screen()
             continue
         again = input('\n\nPlay again [Y/N]?\n')
+        again = again[0]
         loop = again.upper() != 'N'
 
 
